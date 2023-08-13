@@ -1,0 +1,51 @@
+<BFTypedBinder binderType="Tnscmb_Adult_M">
+	<types>
+		<entity>
+			<actor>
+				<animal>
+					<Actinopterygii>
+						<Perciformes>
+							<Istiophoridae>
+								<Tnscmb>
+									<Tnscmb_Adult>
+										<Tnscmb_Adult_M />
+									</Tnscmb_Adult>
+								</Tnscmb>
+							</Istiophoridae>
+						</Perciformes>
+					</Actinopterygii>
+				</animal>
+			</actor>
+		</entity>
+	</types>
+	<instance>
+		<BFGEntity />
+	</instance>
+	<shared>
+		<UIToggleButton template="adopt">
+			<UIAspect>
+				<default image="entities\units\animals\Tnscmb\Tnscmb_Adult_F_icon.dds" />
+			</UIAspect>
+			<on>
+				<event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="Tnscmb_Adult_M" />
+			</on>
+		</UIToggleButton>
+		<BFAIEntityDataShared b_Male="1" b_MediumPredator="false" b_SmallPredator="true" />
+	</shared>
+	<binder>
+		<BFNamedBinder binderName="mainObj">
+			<instance>
+				<BFPhysObj>
+					<BFActorComponent actorfile="entities/units/animals/Tnscmb/Tnscmb_Adult_F.bfm" scale=".1" switch="0 15 30 60" />
+				</BFPhysObj>
+			</instance>
+			<shared>
+				<BFSharedPhysVars>
+					<virtualNodes>
+						<Node_GuestAttack y="-4" />
+					</virtualNodes>
+				</BFSharedPhysVars>
+			</shared>
+		</BFNamedBinder>
+	</binder>
+</BFTypedBinder>
